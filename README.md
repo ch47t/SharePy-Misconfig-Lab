@@ -23,7 +23,7 @@ SharePy est une application de partage de fichiers (type "Mini-Dropbox") constru
 ### Lancement
 1. Cloner le dépôt et basculer sur la branche vulnérable :
    ```bash
-   git clone <URL_DE_TON_REPO>
+   git clone https://github.com/ch47t/SharePy-Misconfig-Lab.git
    cd sharepy_project
    git checkout vulnerable
    ```
