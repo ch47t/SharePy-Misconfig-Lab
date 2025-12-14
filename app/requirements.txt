@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+pyjwt
+psycopg2-binary
+sqlalchemy
+jinja2
+requests
+aiofiles

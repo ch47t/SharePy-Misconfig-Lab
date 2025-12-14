@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="width: 400px;">
+    <h2>User Profile</h2>
+    <img id="avatar" src="/static/default.png" class="profile-pic" alt="Profile">
+    
+    <h3 id="displayname">Loading...</h3>
+    <p>Role: <span id="role">Checking...</span></p>
+
+    <hr style="border-color: #533483; margin: 20px 0;">
+
+    <h4>Update Avatar</h4>
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload (No Validation)</button>
+    <div style="text-align: center; margin: 20px;">
+	    <form action="/search" method="get">
+		<input type="text" name="q" placeholder="Search files..." style="padding: 5px;">
+		<button type="submit">Search</button>
+	    </form>
+    </div>
+
+    <button onclick="logout()" style="background-color: #555; margin-top: 20px;">Logout</button>
+</div>
+
+<script>
+// 1. Load User Data
+async function loadProfile() {
+    const token = getToken();
+    if (!token) window.location.href = '/';
+
+    const res = await fetch('/api/users/me', {
+        headers: {'Authorization': 'Bearer ' + token}
+    });
+
+    if (res.ok) {
+        const data = await res.json();
+        document.getElementById('displayname').innerText = data.username;
+        document.getElementById('role').innerHTML = data.role === 'admin' 
+            ? '<span class="admin-badge">ADMIN</span>' 
+            : data.role;
+        
+        if (data.profile_pic) {
+            document.getElementById('avatar').src = data.profile_pic;
+        }
+    } else {
+        logout();
+    }
+}
+
+// 2. Vulnerable Upload Function
+async function uploadFile() {
+    const fileInput = document.getElementById('fileInput');
+    if (fileInput.files.length === 0) return alert("Select a file!");
+
+    const formData = new FormData();
+    formData.append("file", fileInput.files[0]);
+
+    const token = getToken();
+    const res = await fetch('/api/upload', {
+        method: 'POST',
+        headers: {'Authorization': 'Bearer ' + token},
+        body: formData
+    });
+
+    if (res.ok) {
+        const data = await res.json();
+        alert("File uploaded to: " + data.path);
+        document.getElementById('avatar').src = data.path;
+    } else {
+        alert("Upload failed");
+    }
+}
+
+loadProfile();
+</script>
+{% endblock %}

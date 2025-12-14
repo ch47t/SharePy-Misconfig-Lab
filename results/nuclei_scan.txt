@@ -1,0 +1,37 @@
+[[93mWRN[0m] Loading 2 unsigned templates for scan. Use with caution.
+[[92mswagger-api[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost/docs [[93mpaths[0m=[93m"/docs"[0m]
+[[92mexternal-service-interaction[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mwaf-detect[0m:[1;92mnginxgeneric[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mgeneric-env[0m] [[94mhttp[0m] [[38;5;208mhigh[0m] http://localhost/.env [[93mpaths[0m=[93m"/.env"[0m]
+[[92msnmpv3-detect[0m] [[94mjavascript[0m] [[34minfo[0m] localhost:161 [[96m"Enterprise: unknown"[0m]
+[[92mpgsql-default-db[0m] [[94mjavascript[0m] [[38;5;208mhigh[0m] localhost:5432 [[93mdatabase[0m=[93m"postgres"[0m,[93mpassword[0m=[93m"postgres"[0m,[93musernames[0m=[93m"admin"[0m]
+[[92mpostgres-default-logins[0m] [[94mjavascript[0m] [[38;5;208mhigh[0m] localhost:5432 [[93mpasswords[0m=[93m"postgres"[0m,[93musernames[0m=[93m"admin"[0m]
+[[92mpgsql-file-read[0m] [[94mjavascript[0m] [[38;5;208mhigh[0m] localhost:5432 [[96m"pg_hba.conf"[0m,[96m"pg_snapshots"[0m,[96m"postmaster.opts"[0m,[96m"global"[0m,[96m"pg_wal"[0m,[96m"pg_logical"[0m,[96m"pg_notify"[0m,[96m"pg_subtrans"[0m,[96m"postmaster.pid"[0m,[96m"pg_commit_ts"[0m,[96m"pg_stat_tmp"[0m,[96m"PG_VERSION"[0m,[96m"pg_xact"[0m,[96m"pg_dynshmem"[0m,[96m"pg_stat"[0m,[96m"pg_twophase"[0m,[96m"pg_multixact"[0m,[96m"pg_replslot"[0m,[96m"pg_ident.conf"[0m,[96m"pg_serial"[0m,[96m"base"[0m,[96m"postgresql.auto.conf"[0m,[96m"postgresql.conf"[0m,[96m"pg_tblspc"[0m] [[93mdatabase[0m=[93m"postgres"[0m,[93mpassword[0m=[93m"postgres"[0m,[93musernames[0m=[93m"admin"[0m]
+[[92mpgsql-version-detect[0m] [[94mjavascript[0m] [[38;5;208mhigh[0m] localhost:5432 [[96m"PostgreSQL 15.15 (Debian 15.15-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit"[0m] [[93mdatabase[0m=[93m"postgres"[0m,[93mpassword[0m=[93m"postgres"[0m,[93musernames[0m=[93m"admin"[0m]
+[[92mpgsql-list-database[0m] [[94mjavascript[0m] [[38;5;208mhigh[0m] localhost:5432 [[96m"template0"[0m,[96m"postgres"[0m,[96m"sharepy"[0m,[96m"template1"[0m] [[93mdatabase[0m=[93m"postgres"[0m,[93mpassword[0m=[93m"postgres"[0m,[93musernames[0m=[93m"admin"[0m]
+[[92mpgsql-list-password-hashes[0m] [[94mjavascript[0m] [[38;5;208mhigh[0m] localhost:5432 [[96m"admin : SCRAM-SHA-256$4096:SBp7HI4aZLhW5F+19Nn1TQ==$k7gZ1GL3Rbz1oXHT4Sll0+7FceyJkIXTnQN8FwwyZ9U=:zTfPNS3n/3nUif+C439kWnEC/5yXIOj/4JeYovq96iM="[0m] [[93mdatabase[0m=[93m"postgres"[0m,[93mpassword[0m=[93m"postgres"[0m,[93musernames[0m=[93m"admin"[0m]
+[[92mpgsql-list-users[0m] [[94mjavascript[0m] [[38;5;208mhigh[0m] localhost:5432 [[96m"admin"[0m] [[93mdatabase[0m=[93m"postgres"[0m,[93mpassword[0m=[93m"postgres"[0m,[93musernames[0m=[93m"admin"[0m]
+[[92mpgsql-detect[0m] [[94mtcp[0m] [[34minfo[0m] localhost:5432
+[[92mpgsql-default-db[0m] [[94mjavascript[0m] [[38;5;208mhigh[0m] localhost:5432 [[93mdatabase[0m=[93m"template1"[0m,[93mpassword[0m=[93m"postgres"[0m,[93musernames[0m=[93m"admin"[0m]
+[[92mtech-detect[0m:[1;92mnginx[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mgit-config[0m] [[94mhttp[0m] [[33mmedium[0m] http://localhost/.git/config
+[[92mform-detection[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mopenapi[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost/openapi.json
+[[92moptions-method[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost [[96m"GET"[0m]
+[[92mdockerfile-hidden-disclosure[0m] [[94mhttp[0m] [[33mmedium[0m] http://localhost/Dockerfile
+[[92maddeventlistener-detect[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mnginx-version[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost [[96m"nginx/1.29.4"[0m]
+[[92mredoc-api-docs[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost/redoc
+[[92mhttp-missing-security-headers[0m:[1;92mclear-site-data[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-embedder-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-opener-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mstrict-transport-security[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mcontent-security-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mpermissions-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mx-content-type-options[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mx-permitted-cross-domain-policies[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-resource-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mx-frame-options[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mhttp-missing-security-headers[0m:[1;92mreferrer-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://localhost
+[[92mcrlf-injection-generic[0m] [[94mhttp[0m] [[32mlow[0m] http://localhost/%0D%0ASet-Cookie:crlfinjection=crlfinjection
+[[92mcaa-fingerprint[0m] [[94mdns[0m] [[34minfo[0m] localhost

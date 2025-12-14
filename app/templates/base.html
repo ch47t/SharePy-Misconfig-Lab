@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SharePy - Secure Storage?</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    {% block content %}{% endblock %}
+    
+    <script>
+        // Simple auth check helper
+        function getToken() { return localStorage.getItem('token'); }
+        function logout() { localStorage.removeItem('token'); window.location.href='/'; }
+    </script>
+</body>
+</html>

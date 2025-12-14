@@ -1,0 +1,11 @@
+[2K                        [Status: 200, Size: 1465, Words: 267, Lines: 51, Duration: 122ms][0m
+[2Kdocs                    [Status: 200, Size: 931, Words: 150, Lines: 31, Duration: 73ms][0m
+[2Kprofile                 [Status: 200, Size: 2628, Words: 495, Lines: 91, Duration: 50ms][0m
+[2Kregister                [Status: 200, Size: 1531, Words: 293, Lines: 54, Duration: 104ms][0m
+[2Ksearch                  [Status: 200, Size: 315, Words: 66, Lines: 10, Duration: 131ms][0m
+[2Kstatic                  [Status: 307, Size: 0, Words: 1, Lines: 1, Duration: 59ms][0m
+[2Kuploads                 [Status: 307, Size: 0, Words: 1, Lines: 1, Duration: 79ms][0m
+[2K                        [Status: 403, Size: 153, Words: 3, Lines: 8, Duration: 0ms][0m
+[2Kcss                     [Status: 301, Size: 169, Words: 5, Lines: 8, Duration: 7ms][0m
+[2K                        [Status: 200, Size: 264, Words: 69, Lines: 8, Duration: 2ms][0m
+[2K                        [Status: 403, Size: 153, Words: 3, Lines: 8, Duration: 2ms][0m
