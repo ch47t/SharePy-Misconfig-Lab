@@ -187,25 +187,26 @@ def api_register(user: UserAuth, db: Session = Depends(get_db)):
 
 @app.post("/api/login")
 def api_login(user: UserAuth, response: Response, db: Session = Depends(get_db)):
-    # ... (vérification du mot de passe inchangée) ...
+    # 1. RÉCUPÉRATION DE L'UTILISATEUR (Indispensable pour éviter le NameError)
+    db_user = db.query(User).filter(User.username == user.username).first()
+
+    # 2. VÉRIFICATION DU MOT DE PASSE
+    if not db_user or db_user.password != user.password:
+        raise HTTPException(401, "Bad credentials")
     
-    # Création du token
+    # 3. CRÉATION DU TOKEN
     token = jwt.encode({"sub": db_user.username, "role": db_user.role}, SECRET_KEY, algorithm="HS256")
     
-    # 🍪 SÉCURISATION DU COOKIE (M9 FIX)
+    # 4. SÉCURISATION DU COOKIE (Votre correctif M9)
     response.set_cookie(
         key="session_token",
         value=token,
-        # 1. Empêche le JavaScript de lire ce cookie (Adieu le vol XSS !)
+        # Empêche le vol XSS (JavaScript ne peut plus lire ce cookie)
         httponly=True,
-        
-        # 2. Empêche l'envoi du cookie sur une connexion non chiffrée
-        # Note : Les navigateurs modernes acceptent Secure=True sur http://localhost
+        # Active la protection HTTPS (Navigateurs acceptent sur localhost)
         secure=True,
-        
-        # 3. Empêche le cookie d'être envoyé lors d'une navigation cross-site (CSRF)
+        # Protection CSRF stricte
         samesite="strict",
-        
         max_age=1800 # 30 minutes
     )
     
